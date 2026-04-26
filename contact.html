@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="content fade-in">
+  <h2>Contactez-moi</h2>
+
+  <input type="text" id="name" placeholder="Votre nom">
+  <textarea id="message" placeholder="Votre message"></textarea>
+
+  <button onclick="sendToWhatsApp()">Envoyer</button>
+</section>
+<script>
+function sendToWhatsApp() {
+  let name = document.getElementById("name").value;
+  let message = document.getElementById("message").value;
+
+  let phone = "24381243547";
+
+  let url = "https://wa.me/" + phone + "?text=" +
+  encodeURIComponent("Nom: " + name + "\nMessage: " + message);
+
+  window.open(url, '_blank');
+}
+</script>
+<!-- Boutons flottants pro -->
+<div class="floating-buttons">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/243981243547" class="float-btn whatsapp" target="_blank">
+    <span>WhatsApp</span>
+     💬
+  </a>
+
+  <!-- Accueil -->
+  <a href="index.html" class="float-btn home">
+    <span>Accueil</span>
+    🏠
+  </a>
+
+
+</div>
+</body>
+</html>

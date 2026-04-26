@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.profile-img {
+  width: 130px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+}
+
+/* BOUTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* PROJECTS */
+.projects {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 25px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* ANIMATION */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+  }
+}
+/* CONTENEUR */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+/* BOUTONS */
+.float-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* WhatsApp */
+.float-btn.whatsapp {
+  background: #25D366;
+}
+
+/* Accueil */
+.float-btn.home {
+  background: #38bdf8;
+  color: black;
+}
+
+/* HOVER ANIMATION */
+.float-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* TOOLTIP (texte caché) */
+.float-btn span {
+  position: absolute;
+  right: 70px;
+  background: #111;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+/* Affichage au survol */
+.float-btn:hover span {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
+/* CONTAINER */
+.projects-container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.project-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+/* HOVER */
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* TEXTE */
+.overlay h3 {
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  margin-bottom: 15px;
+}
+/* ABOUT SECTION */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.about-img img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+/* SECTION */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+  background: #020617;
+}
+
+.testimonials h2 {
+  margin-bottom: 30px;
+}
+
+/* CONTAINER */
+.testimonials-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.testimonial-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 300px;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* HOVER */
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+/* TEXTE */
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* NOM */
+.testimonial-card h4 {
+  color: #38bdf8;
+}
