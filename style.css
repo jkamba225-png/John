@@ -328,3 +328,31 @@ input, textarea {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
+.problem-solution {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ps-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.ps-box {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: left;
+}
+
+.ps-box h3 {
+  margin-bottom: 10px;
+}
+
+.ps-box ul {
+  padding-left: 20px;
+}
