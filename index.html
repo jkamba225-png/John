@@ -13,12 +13,12 @@
 <body>
 
 <header>
-  <h1>John Kamba</h1>
+  <h1 class="typing">John Kamba</h1>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="about.html">À propos</a>
-    <a href="projects.html">Projets</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" class="btn">Accueil</a>
+    <a href="about.html" class="btn">À propos</a>
+    <a href="projects.html" class="btn">Projets</a>
+    <a href="contact.html" class="btn">Contact</a>
   </nav>
 </header>
 
@@ -26,19 +26,19 @@
   <img src="cadet.png" class="profile-img">
   
   <h2>Développeur Web</h2>
-  <p>Je crée des expériences digitales modernes et performantes.</p>
+  <p class="typing">Je crée des expériences digitales modernes et performantes.</p>
 
   <a href="contact.html" class="btn">Me contacter</a>
 </section>
 
 <section class="testimonials">
 
-  <h2>Ce que disent mes clients</h2>
+  <h2 class="typing">Ce que disent mes clients</h2>
 
   <div class="testimonials-container">
 
     <div class="testimonial-card">
-      <p>
+      <p class="typing">
         “Très satisfait du travail ! Le site est rapide, moderne et exactement
         comme je voulais. Je recommande fortement.”
       </p>
@@ -46,7 +46,7 @@
     </div>
 
     <div class="testimonial-card">
-      <p>
+      <p class="typing">
         “Professionnel, sérieux et à l’écoute. Mon projet a été réalisé rapidement
         avec un excellent résultat.”
       </p>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="testimonial-card">
-      <p>
+      <p class="typing">
         “Très bonne collaboration ! Le design est propre et le site fonctionne
         parfaitement sur téléphone.”
       </p>
@@ -81,6 +81,26 @@
     <span>Accueil</span>
     🏠
   </a>
+  <script>
+const texts = document.querySelectorAll(".typing");
+
+texts.forEach((el) => {
+  const text = el.innerText;
+  el.innerText = "";
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      el.innerText += text.charAt(i);
+      i++;
+      setTimeout(type, 40); // vitesse (plus petit = plus rapide)
+    }
+  }
+
+  type();
+});
+</script>
+
 
 </div>
 </body>
